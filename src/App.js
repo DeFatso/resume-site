@@ -1,22 +1,14 @@
+import React from "react";
+import Header from "./components/Header";
+import About from "./components/About";
+import Skills from "./components/Skills";
+
 function App() {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-      <h1>Your Name</h1>
-      <p><strong>Front-End Developer</strong></p>
-      <p>Email: you@example.com</p>
-
-      <h2>Skills</h2>
-      <ul>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>HTML & CSS</li>
-      </ul>
-
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Project A:</strong> Description here</li>
-        <li><strong>Project B:</strong> Description here</li>
-      </ul>
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+      <Header />
+      <About />
+      <Skills />
     </div>
   );
 }
