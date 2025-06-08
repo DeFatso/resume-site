@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Projects.css";
 
 const projects = [
     {
@@ -25,27 +26,21 @@ const projects = [
 
 function Projects() {
     return (
-        <section style={{ marginBottom: "3rem" }}>
-            <h2>Projects</h2>
-
-            {projects.map((project, index) => (
-                <div key={index} style={{ marginBottom: "1.5rem" }}>
-                    <h3 style={{ marginBottom: "0.3rem" }}>{project.title}</h3>
-                    <p style={{margin: "0"}}>{project.description}</p>
-
-                    {project.link && (
-                        <p>
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                View on GitHub
-                            </a>
-                        </p>
-                    )
-
-                    }
-                </div>
-            ))}
-        </section>
-    );
+    <section className="projects-section">
+      <h2>Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
+              View on GitHub
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default Projects;
