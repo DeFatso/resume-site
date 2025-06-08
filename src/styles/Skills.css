@@ -1,0 +1,74 @@
+.skills-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.skills-section h2 {
+  text-align: center;
+  color: #007acc;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #004a80;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007acc, #3399ff);
+  border-radius: 10px 0 0 10px;
+  width: 0;
+  animation: fillProgress 1.5s ease forwards;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--width);
+  }
+}
+
+
+/* Dark mode */
+.app.dark .skills-section h2 {
+  color: #66ccff;
+}
+
+.app.dark .skill-name {
+  color: #a0d8ff;
+}
+
+.app.dark .progress-bar {
+  background-color: #333;
+}
+
+.app.dark .progress-fill {
+  background: linear-gradient(90deg, #3399ff, #66ccff);
+}
