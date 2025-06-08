@@ -1,13 +1,16 @@
 import React from "react";
+import profilePic from "../assets/profile.jpg";  // adjust path if needed
+import "../styles/Header.css";
 
 function Header() {
-    return (
-        <header style={{ textAlign: "center", marginBottom: "3rem"}}>
-            <h1 style={{ fontSize: "2.5rem", margin: "0"}}>Farai Vambe</h1>
-            <p style={{ fontSize: "1.2rem", color: "#555"}}>Front-End Developer</p>
-            <p style={{ fontStyle: "italic", marginTop: "0.5rem"}}>“Crafting modern web experiences with React”</p>
-        </header>
-    );
+  return (
+    <header className="header">
+      <img src={profilePic} alt="Farai Vambe" className="profile-pic" />
+      <h1>Farai Vambe</h1>
+      <p>Front-End Developer</p>
+      <p className="tagline">“Crafting modern web experiences with React”</p>
+    </header>
+  );
 }
 
 export default Header;
