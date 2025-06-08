@@ -19,7 +19,7 @@ const projects = [
     },
     {
         title: "AirBnB Clone",
-        description: "Description of Project 3",
+        description: "A clone of the AirBnB website",
         link: "https://github.com/DeFatso/AirBnB_clone",
     },
 ];
@@ -31,9 +31,9 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <h3>{project.name}</h3>
+            <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="github-link">
               View on GitHub
             </a>
           </div>
