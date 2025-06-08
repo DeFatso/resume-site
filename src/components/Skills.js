@@ -1,11 +1,12 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaTools } from "react-icons/fa";
 
 const skills = [
     { name: "HTML", icon: <FaHtml5 color="#e44d26" />, level: 90 },
     { name: "CSS", icon: <FaCss3Alt color="#264de4"/>, level: 80 },
     { name: "JavaScript", icon: <FaJs color="#f0db4f"/>, level: 70 },
     { name: "React", icon: <FaReact color="#61dbfb"/>, level: 80 },
+    { name: "Unit Testing (Jest)", icon: <FaTools />, level: 65 },
 ];
 
 function Skills() {
