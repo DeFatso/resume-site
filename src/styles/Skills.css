@@ -53,6 +53,8 @@
   will-change: width;
 }
 
+
+
 /* Dark mode */
 .app.dark .skills-section h2 {
   color: #66ccff;
