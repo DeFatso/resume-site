@@ -1,0 +1,80 @@
+.education-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #f5faff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 122, 204, 0.1);
+}
+
+.education-section h2 {
+  text-align: center;
+  color: #007acc;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.education-item {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  border-left: 4px solid #007acc;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 122, 204, 0.05);
+}
+
+.education-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #004a80;
+}
+
+.education-item p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.education-item em {
+  font-style: italic;
+  color: #007acc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .education-item {
+    padding: 1rem;
+  }
+
+  .education-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode */
+.app.dark .education-section {
+  background: #012244;
+  box-shadow: 0 8px 16px rgba(102, 204, 255, 0.05);
+}
+
+.app.dark .education-item {
+  background: #001930;
+  border-left-color: #66ccff;
+}
+
+.app.dark .education-item h3 {
+  color: #a0d8ff;
+}
+
+.app.dark .education-item p {
+  color: #c0e0ff;
+}
+
+.app.dark .education-item em {
+  color: #66ccff;
+}

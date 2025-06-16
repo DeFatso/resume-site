@@ -1,11 +1,12 @@
 import React from "react";
+import "../styles/Education.css";
 
 function Education() {
   const educationList = [
     {
       degree: "Software Engineering",
       school: "ALX Africa",
-      status: "In Completed",
+      status: "Completed",
       year: "2023 – 2024",
     },
     {
@@ -17,13 +18,13 @@ function Education() {
   ];
 
   return (
-    <section style={{ marginBottom: '3rem' }}>
+    <section className="education-section" id="education">
       <h2>Education</h2>
       {educationList.map((edu, index) => (
-        <div key={index} style={{ marginBottom: '1.5rem' }}>
-          <h3 style={{ margin: 0 }}>{edu.degree}</h3>
-          <p style={{ margin: '0.2rem 0', fontWeight: 'bold' }}>{edu.school}</p>
-          <p style={{ margin: 0 }}>{edu.year} — <em>{edu.status}</em></p>
+        <div key={index} className="education-item">
+          <h3>{edu.degree}</h3>
+          <p><strong>{edu.school}</strong></p>
+          <p>{edu.year} — <em>{edu.status}</em></p>
         </div>
       ))}
     </section>

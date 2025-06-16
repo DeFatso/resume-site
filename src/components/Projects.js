@@ -22,6 +22,11 @@ const projects = [
         description: "A clone of the AirBnB website",
         link: "https://github.com/DeFatso/AirBnB_clone",
     },
+        {
+        title: "Saeku Blockchain Services",
+        description: "A blockchain services provider",
+        link: "https://github.com/farscorp/saeku-web-frontend",
+    },
 ];
 
 function Projects() {

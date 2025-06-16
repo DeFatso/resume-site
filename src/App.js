@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Education from "./components/Education";
 import "./styles/App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
       <section id="experience"><Experience /></section>
+      <section id="education"><Education /></section>
       <section id="contact"><Contact /></section>
     </div>
   );
