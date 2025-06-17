@@ -17,32 +17,36 @@ import {
   SiJest,
 } from "react-icons/si";
 
-export default function Skills() {
-  const skills = [
-    { name: "HTML", level: 90, icon: <FaHtml5 color="#e34c26" /> },
-    { name: "CSS", level: 85, icon: <FaCss3Alt color="#264de4" /> },
-    { name: "JavaScript", level: 80, icon: <FaJsSquare color="#f0db4f" /> },
-    { name: "React", level: 75, icon: <FaReact color="#61dbfb" /> },
-    { name: "Tailwind CSS", level: 80, icon: <SiTailwindcss color="#38bdf8" /> },
-    { name: "Bootstrap", level: 70, icon: <FaBootstrap color="#7952b3" /> },
-    { name: "Chakra UI", level: 65, icon: <SiChakraui color="#61c1b7" /> },
-    { name: "ESLint", level: 60, icon: <SiEslint color="#4b32c3" /> },
-    { name: "Prettier", level: 60, icon: <SiPrettier color="#f7b93e" /> },
-    { name: "Figma", level: 75, icon: <SiFigma color="#a259ff" /> },
-    { name: "Chrome DevTools", level: 85, icon: <FaChrome color="#4285f4" /> },
-    { name: "Jest", level: 65, icon: <SiJest color="#99425b" /> },
-  ];
+// ✅ Skills array outside the component (won't trigger unnecessary renders)
+const skills = [
+  { name: "HTML", level: 90, icon: <FaHtml5 color="#e34c26" /> },
+  { name: "CSS", level: 85, icon: <FaCss3Alt color="#264de4" /> },
+  { name: "JavaScript", level: 80, icon: <FaJsSquare color="#f0db4f" /> },
+  { name: "React", level: 75, icon: <FaReact color="#61dbfb" /> },
+  { name: "Tailwind CSS", level: 80, icon: <SiTailwindcss color="#38bdf8" /> },
+  { name: "Bootstrap", level: 70, icon: <FaBootstrap color="#7952b3" /> },
+  { name: "Chakra UI", level: 65, icon: <SiChakraui color="#61c1b7" /> },
+  { name: "ESLint", level: 60, icon: <SiEslint color="#4b32c3" /> },
+  { name: "Prettier", level: 60, icon: <SiPrettier color="#f7b93e" /> },
+  { name: "Figma", level: 75, icon: <SiFigma color="#a259ff" /> },
+  { name: "Chrome DevTools", level: 85, icon: <FaChrome color="#4285f4" /> },
+  { name: "Jest", level: 65, icon: <SiJest color="#99425b" /> },
+];
 
-  const [animatedWidths, setAnimatedWidths] = useState([]);
+export default function Skills() {
+  const [animatedWidths, setAnimatedWidths] = useState(
+    skills.map(() => 0)
+  );
 
   useEffect(() => {
-    // Always reset widths when skill count changes
+    // Reset first, then animate to actual widths
     setAnimatedWidths(skills.map(() => 0));
     const timeout = setTimeout(() => {
       setAnimatedWidths(skills.map((skill) => skill.level));
     }, 100);
+
     return () => clearTimeout(timeout);
-  }, []); // re-run effect when number of skills changes
+  }, []); // ✅ Empty array — no ESLint warning now
 
   return (
     <section id="skills" className="skills-section">
