@@ -42,7 +42,7 @@ export default function Skills() {
       setAnimatedWidths(skills.map((skill) => skill.level));
     }, 100);
     return () => clearTimeout(timeout);
-  }, [skills.length]); // re-run effect when number of skills changes
+  }, []); // re-run effect when number of skills changes
 
   return (
     <section id="skills" className="skills-section">
