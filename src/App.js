@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
+import Navigator from "./components/Navigator"; // import Navigator
 import "./styles/App.css";
 
 function App() {
@@ -17,12 +18,7 @@ function App() {
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
-      <header className="app-header">
-        <h1>My Resume</h1>
-        <button onClick={toggleDarkMode} className="toggle-btn">
-          {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-        </button>
-      </header>
+      <Navigator darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Header />
       <section id="about"><About /></section>
       <section id="skills"><Skills /></section>
