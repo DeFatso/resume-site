@@ -1,0 +1,138 @@
+/* Footer Base Styles */
+.site-footer {
+  background: linear-gradient(135deg, #007acc 0%, #004a80 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.app.dark .site-footer {
+  background: #0d0b1f;
+  border-top: 1px solid #2a2746;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.footer-links a, .privacy-btn {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.2rem 0;
+  position: relative;
+}
+
+.footer-links a:hover, .privacy-btn:hover {
+  color: white;
+}
+
+.footer-links a::after, .privacy-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after, .privacy-btn:hover::after {
+  width: 100%;
+}
+
+/* Modal Styles */
+.privacy-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.privacy-modal.dark .modal-content {
+  background: #0d0b1f;
+  color: #d0dfff;
+  border: 1px solid #2a2746;
+}
+
+.modal-content {
+  background: white;
+  color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.policy-section {
+  margin: 1.5rem 0;
+}
+
+.policy-section h3 {
+  color: #007acc;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-modal.dark .policy-section h3 {
+  color: #66ccff;
+}
+
+.last-updated {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.privacy-modal.dark .last-updated {
+  color: #a0a0a0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 1rem;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+  }
+}

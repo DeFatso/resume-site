@@ -1,79 +1,92 @@
+/* Import the Handlee font */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar Container */
 .nav-bar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #0d0b1f;
-  padding: 1rem 2rem;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #333;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* max safe width */
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
+/* Site Title */
 .nav-title {
-  font-size: 1.5rem;
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #777CD5;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
+/* Center Nav Links */
 .nav-center {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 5vw, 83px); /* responsive spacing */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
 }
 
+/* Link Styles */
 .nav-center a {
-  color: #fff;
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-center a:hover {
-  color: #007acc;
+  color: #777CD5;
 }
 
-.nav-right .toggle-btn {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
+/* Menu Button for Mobile */
+.menu-toggle {
+  display: none;
+  background: none;
   border: none;
-  border-radius: 6px;
-  background-color: #1f1d36;
-  color: #fff;
+  font-size: 24px;
   cursor: pointer;
+  color: #ffffff;
 }
 
-.nav-right .toggle-btn:hover {
-  background-color: #2c2a48;
-}
-
-/* 🔁 Responsive Mobile Styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
 
   .nav-center {
-    display: none;
     flex-direction: column;
+    gap: 20px;
+    display: none;
+    padding-top: 20px;
     width: 100%;
-    margin-top: 1rem;
   }
 
-  .nav-center.open {
+  .nav-center.active {
     display: flex;
   }
 
-  .nav-right {
-    margin-top: 1rem;
-    width: 100%;
-    text-align: right;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 }
