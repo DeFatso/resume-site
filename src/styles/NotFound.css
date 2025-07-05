@@ -1,16 +1,118 @@
-.NotFound {
-    background-image: url("../assets/background-img.png");
+.not-found {
+  background-image: url("../assets/background-img.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 .hero404 {
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-    padding: 25rcap;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
 }
-.hero404 h1 {
-    width: 350px;
-    height: 350px;
-    color: blue;
-    padding: 40px;
-    border: 1px solid blue;
+
+.error-container {
+  max-width: 500px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out;
+}
+
+.error-code {
+  font-size: 8rem;
+  margin: 0;
+  color: #6c63ff; /* Purple accent */
+  line-height: 1;
+}
+
+.error-message {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.error-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-btn,
+.contact-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-btn {
+  background: #6c63ff;
+  color: white;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+.contact-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.astronaut-animation {
+  font-size: 10rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero404 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .error-code {
+    font-size: 6rem;
+  }
+  .astronaut-animation {
+    font-size: 6rem;
+    margin-top: 2rem;
+  }
 }
