@@ -1,75 +1,140 @@
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  gap: 60px;
+  gap: 40px;
   font-family: "Arial", sans-serif;
   color: #ffffff;
 }
 
 .text-section {
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 
 .text-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #ffffff;
 }
 
 .personal-info h3 {
-  font-size: 18px;
-  margin: 25px 0 10px 0;
+  font-size: 1.2rem;
+  margin: 20px 0 10px 0;
+}
+
+.personal-info p {
+  font-size: 0.95rem;
+  margin: 2px 0;
 }
 
 .about-skills {
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 
 .skill-item {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .skill-name {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
 }
 
 .skill-progress {
   height: 4px;
   background-color: #777cd5;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 .skill-percent {
   display: block;
   text-align: right;
-  font-size: 14px;
-  color: #666;
+  font-size: 0.85rem;
+  color: #ccc;
 }
 
 .view-more-btn {
-  background-color: #00CFFF;
+  background-color: #00cfff;
   border: none;
   color: #ffffff;
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   border-radius: 10px;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
 
 .view-more-btn:hover {
-  text-decoration: black;
   opacity: 0.9;
 }
 
+/* Tablet & below */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 30px;
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .text-section,
+  .about-skills {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .text-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .personal-info h3 {
+    font-size: 1rem;
+  }
+
+  .personal-info p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens (≤480px) */
+@media (max-width: 480px) {
+  .about-container {
+    gap: 15px;
+    padding: 15px 8px;
+  }
+
+  .text-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .personal-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .personal-info p {
+    font-size: 0.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+
+  .skill-percent {
+    font-size: 0.75rem;
   }
 }
