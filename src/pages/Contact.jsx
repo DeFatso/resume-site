@@ -48,44 +48,42 @@ export default function Contact() {
           </p>
         ) : (
           <form
-            className="contact-form"
-            onSubmit={handleSubmit}
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
           >
-            {/* Hidden form-name field */}
             <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
 
             <label htmlFor="name">Name</label>
             <input
               type="text"
-              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Your full name"
             />
 
             <label htmlFor="email">Email</label>
             <input
               type="email"
-              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="you@example.com"
             />
 
             <label htmlFor="message">Message</label>
             <textarea
-              id="message"
               name="message"
-              rows="5"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Write your message here..."
-            />
+            ></textarea>
 
             <button type="submit">Send</button>
           </form>
