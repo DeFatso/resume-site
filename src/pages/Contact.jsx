@@ -48,6 +48,7 @@ export default function Contact() {
           </p>
         ) : (
           <form
+            className="contact-form"
             name="contact"
             method="POST"
             data-netlify="true"
