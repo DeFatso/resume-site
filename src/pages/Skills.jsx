@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Navigator from "../components/Navigator";
+import Footer from "../components/Footer";
 import "../styles/Skills.css";
 
 const skills = [
   { name: "HTML", level: 90 },
   { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 80 },
+  { name: "JavaScript", level: 60 },
   { name: "React", level: 75 },
-  { name: "Tailwind CSS", level: 80 },
-  { name: "Bootstrap", level: 70 },
-  { name: "Chakra UI", level: 65 },
-  { name: "ESLint", level: 60 },
-  { name: "Prettier", level: 60 },
-  { name: "Figma", level: 75 },
+  { name: "Tailwind CSS", level: 60 },
+  { name: "Bootstrap", level: 60 },
+  { name: "Chakra UI", level: 35 },
+  { name: "ESLint", level: 90 },
+  { name: "Prettier", level: 100 },
+  { name: "Figma", level: 85 },
   { name: "Chrome DevTools", level: 85 },
   { name: "Jest", level: 65 },
 ];
@@ -46,6 +47,7 @@ export default function Skills() {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

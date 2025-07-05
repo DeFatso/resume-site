@@ -60,6 +60,7 @@
 }
 
 .view-more-btn {
+  text-decoration: none;
   background-color: #00cfff;
   border: none;
   color: #ffffff;

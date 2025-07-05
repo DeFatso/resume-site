@@ -26,14 +26,14 @@ function AboutHero() {
       <div className="about-skills">
         <div className="skill-item">
           <span className="skill-name">REACT</span>
-          <div className="skill-progress" style={{ width: "30%" }}></div>
-          <span className="skill-percent">30%</span>
+          <div className="skill-progress" style={{ width: "75%" }}></div>
+          <span className="skill-percent">75%</span>
         </div>
 
         <div className="skill-item">
           <span className="skill-name">JAVASCRIPT</span>
-          <div className="skill-progress" style={{ width: "80%" }}></div>
-          <span className="skill-percent">80%</span>
+          <div className="skill-progress" style={{ width: "60%" }}></div>
+          <span className="skill-percent">60%</span>
         </div>
 
         <div className="skill-item">
