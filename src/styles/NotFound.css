@@ -1,0 +1,16 @@
+.NotFound {
+    background-image: url("../assets/background-img.png");
+}
+.hero404 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 25rcap;
+}
+.hero404 h1 {
+    width: 350px;
+    height: 350px;
+    color: blue;
+    padding: 40px;
+    border: 1px solid blue;
+}

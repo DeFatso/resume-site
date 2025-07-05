@@ -1,4 +1,6 @@
 import React from "react";
+import Navigator from "../components/Navigator";
+import Footer from "../components/Footer"
 import "../styles/Experience.css";
 
 const jobs = [
@@ -29,6 +31,7 @@ const jobs = [
 export default function Experience() {
   return (
     <section className="experience-section">
+      <Navigator />
       <h2 className="experience-title">Experience</h2>
       <div className="experience-timeline">
         {jobs.map((job, index) => (
@@ -46,6 +49,7 @@ export default function Experience() {
           </div>
         ))}
       </div>
+      <Footer />
     </section>
   );
 }

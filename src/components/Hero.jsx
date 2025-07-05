@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../styles/Hero.css";
 import profileImg from "../assets/profile.jpg"; // adjust path if needed
 
@@ -22,14 +24,24 @@ function Hero() {
         </h1>
         <h2>A Software Developer</h2>
         <p>
-          Passionate software developer with expertise in full-stack development, problem-solving,
-          and clean code. Dedicated to building efficient, scalable solutions that deliver exceptional
-          user experiences.
+          Passionate software developer with expertise in full-stack
+          development, problem-solving, and clean code. Dedicated to building
+          efficient, scalable solutions that deliver exceptional user
+          experiences.
         </p>
 
         <div className="hero-buttons">
-          <button className="btn primary">Download CV</button>
-          <button className="btn secondary">More info...</button>
+          <a
+            href="/cv.pdf"
+            download="Farai_Vambe_CV.pdf"
+            className="btn primary"
+          >
+            Download CV
+          </a>
+
+          <Link to="/about" className="btn secondary">
+            More info…
+          </Link>
         </div>
       </div>
     </section>

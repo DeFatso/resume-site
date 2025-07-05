@@ -1,15 +1,28 @@
+/* Import Montserrat for consistency */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+.skills-page {
+  background: #f5faff;
+  background-image: url("../assets/background-img.png");
+}
 .skills-section {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 2rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
 }
 
-.skills-section h2 {
+.skills-title {
   text-align: center;
   color: #007acc;
   font-size: 2.2rem;
   margin-bottom: 2rem;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .skills-list {
@@ -29,14 +42,6 @@
 .skill:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 122, 204, 0.2);
-}
-
-.skill-icon {
-  font-size: 2.4rem;
-  margin-bottom: 0.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .skill-name {
@@ -64,7 +69,13 @@
 }
 
 /* DARK MODE */
-.app.dark .skills-section h2 {
+.app.dark .skills-section {
+  background-image: none; /* optional, dark bg */
+  background-color: #012244;
+  color: #fff;
+}
+
+.app.dark .skills-title {
   color: #66ccff;
 }
 

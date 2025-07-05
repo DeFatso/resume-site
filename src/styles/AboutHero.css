@@ -1,0 +1,75 @@
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 60px;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.text-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.personal-info h3 {
+  font-size: 18px;
+  margin: 25px 0 10px 0;
+}
+
+.about-skills {
+  flex: 1;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skill-progress {
+  height: 4px;
+  background-color: #777cd5;
+  margin: 3px 0;
+}
+
+.skill-percent {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+.view-more-btn {
+  background-color: #00CFFF;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px 20px; 
+  border-radius: 10px;
+  width: 200px;
+}
+
+.view-more-btn:hover {
+  text-decoration: black;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

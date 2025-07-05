@@ -2,10 +2,11 @@
 
 .hero {
   display: flex;
+  flex-wrap: wrap; /* allow wrapping */
   justify-content: space-between;
   align-items: center;
-  width: 1344px;
-  height: 440px;
+  gap: 1rem;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   color: white;
@@ -15,15 +16,14 @@
 }
 
 .hero-left {
-  flex: 1;
+  flex: 1 1 100%;
   font-size: 1.5rem;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
 }
 
 .hero-center {
-  flex: 1;
+  flex: 1 1 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .hero-right {
-  flex: 2;
+  flex: 1 1 300px;
   max-width: 600px;
   padding-left: 20px;
 }
@@ -85,7 +85,8 @@
 
 .hero-buttons {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 1rem;
 }
 
@@ -110,4 +111,54 @@
 
 .btn:hover {
   opacity: 0.9;
+}
+
+/* 🎯 Responsive tweaks */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-center,
+  .hero-right {
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+
+  .hero-right h1 {
+    font-size: 2rem;
+  }
+
+  .hero-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .image-bg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-img {
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 130px;
+  }
 }

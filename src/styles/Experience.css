@@ -1,6 +1,6 @@
 .experience-section {
-  background: linear-gradient(135deg, #f0f4f8, #ffffff);
-  padding: 4rem 2rem;
+  background-image: url("../assets/background-img.png");
+  padding: 0rem 2rem;
   animation: fadeSlideIn 1s ease-in-out;
 }
 
@@ -21,7 +21,7 @@
 .experience-card {
   width: 90%;
   max-width: 700px;
-  background: white;
+  background: rgba(255, 255, 255, 0);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 2rem;

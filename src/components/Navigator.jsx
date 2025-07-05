@@ -10,10 +10,10 @@ function Navigator() {
       
       <div className={`nav-center ${menuActive ? "active" : ""}`}>
         <a href="/" onClick={() => setMenuActive(false)}>Home</a>
-        <a href="about" onClick={() => setMenuActive(false)}>About</a>
-        <a href="#skills" onClick={() => setMenuActive(false)}>Skills</a>
-        <a href="#experience" onClick={() => setMenuActive(false)}>Experience</a>
-        <a href="#contact" onClick={() => setMenuActive(false)}>Contact</a>
+        <a href="/about" onClick={() => setMenuActive(false)}>About</a>
+        <a href="/skills" onClick={() => setMenuActive(false)}>Skills</a>
+        <a href="/experience" onClick={() => setMenuActive(false)}>Experience</a>
+        <a href="/contact" onClick={() => setMenuActive(false)}>Contact</a>
       </div>
       
       <button 
