@@ -6,20 +6,21 @@ function AboutHero() {
   return (
     <div className="about-container">
       <div className="text-section">
-        <h2>Dummy Text (Lorem Ipsum Style):</h2>
+        <h2>Get to Know Me:</h2>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam..."
+          I’m a passionate software developer based in South Africa, dedicated to building
+          clean, efficient, and user-friendly web applications. With a strong foundation in
+          front-end technologies and a growing expertise in full-stack development, I enjoy
+          solving complex problems and creating meaningful digital experiences.
         </p>
 
         <div className="personal-info">
           <h3>Full Name: Farai Vambe</h3>
           <p>Age: 25 Years</p>
           <p>Language: English, Shona</p>
-          <p>Phone No: +00 9876543210</p>
-          <p>Email: mail.example@gmail.com</p>
-          <p>Address: Ruami Mello Moraes, Salvador, MA, 40352, Brazil</p>
+          <p>Phone No: +27 86737863</p>
+          <p>Email: vambef7@gmail.com</p>
+          <p>Address: 60 Die Ou Pad Rd, Harveston AH, Roodepoort, 1724</p>
         </div>
       </div>
 

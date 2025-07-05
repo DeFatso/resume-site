@@ -32,7 +32,7 @@ export default function Experience() {
   return (
     <section className="experience-section">
       <Navigator />
-      <h2 className="experience-title">Experience</h2>
+      <h2 className="experience-title">My Experience</h2>
       <div className="experience-timeline">
         {jobs.map((job, index) => (
           <div key={index} className="experience-card fade-in">

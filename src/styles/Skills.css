@@ -1,5 +1,6 @@
 /* Import Montserrat for consistency */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
 .skills-page {
   background-image: url("../assets/background-img.png");
@@ -11,13 +12,14 @@
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Handlee", cursive;
   color: #000;
 }
 
 .skills-title {
+  font-family: "Handlee", cursive;
   text-align: center;
-  color: #007acc;
+  color: #00cfff;
   font-size: 2.2rem;
   margin-bottom: 2rem;
   letter-spacing: 1px;
@@ -61,40 +63,8 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(to right, #007acc, #3399ff);
+  background: linear-gradient(to right, #00cfff, #777cd5);
   width: 0;
   transition: width 1.5s ease-in-out;
   border-radius: 8px;
-}
-
-/* DARK MODE */
-.app.dark .skills-section {
-  background-image: none; /* optional, dark bg */
-  background-color: #012244;
-  color: #fff;
-}
-
-.app.dark .skills-title {
-  color: #66ccff;
-}
-
-.app.dark .skill {
-  background: #012244;
-  box-shadow: 0 4px 12px rgba(102, 204, 255, 0.1);
-}
-
-.app.dark .skill:hover {
-  box-shadow: 0 8px 20px rgba(102, 204, 255, 0.2);
-}
-
-.app.dark .skill-name {
-  color: #a0d8ff;
-}
-
-.app.dark .progress-bar {
-  background-color: #333;
-}
-
-.app.dark .progress-fill {
-  background: linear-gradient(90deg, #3399ff, #66ccff);
 }

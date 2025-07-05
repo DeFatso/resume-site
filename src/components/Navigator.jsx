@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Navigator.css";
 
 function Navigator() {
@@ -7,17 +8,27 @@ function Navigator() {
   return (
     <nav className="nav-bar">
       <div className="nav-title">Resume</div>
-      
+
       <div className={`nav-center ${menuActive ? "active" : ""}`}>
-        <a href="/" onClick={() => setMenuActive(false)}>Home</a>
-        <a href="/about" onClick={() => setMenuActive(false)}>About</a>
-        <a href="/skills" onClick={() => setMenuActive(false)}>Skills</a>
-        <a href="/experience" onClick={() => setMenuActive(false)}>Experience</a>
-        <a href="/contact" onClick={() => setMenuActive(false)}>Contact</a>
+        <Link to="/" onClick={() => setMenuActive(false)}>
+          Home
+        </Link>
+        <Link to="/about" onClick={() => setMenuActive(false)}>
+          About
+        </Link>
+        <Link to="/skills" onClick={() => setMenuActive(false)}>
+          Skills
+        </Link>
+        <Link to="/experience" onClick={() => setMenuActive(false)}>
+          Experience
+        </Link>
+        <Link to="/contact" onClick={() => setMenuActive(false)}>
+          Contact
+        </Link>
       </div>
-      
-      <button 
-        className="menu-toggle" 
+
+      <button
+        className="menu-toggle"
         onClick={() => setMenuActive(!menuActive)}
         aria-label="Toggle menu"
       >

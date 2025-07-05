@@ -23,7 +23,7 @@ export default function Skills() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setAnimatedWidths(skills.map(skill => skill.level));
+      setAnimatedWidths(skills.map((skill) => skill.level));
     }, 100);
     return () => clearTimeout(timeout);
   }, []);

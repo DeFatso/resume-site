@@ -1,17 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+.contact-page {
+  background-image: url("../assets/background-img.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
 .contact-section {
   max-width: 600px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .contact-section h2 {
   font-size: 2rem;
+  font-family: "Handlee", cursive;
   margin-bottom: 1.5rem;
-  color: #007acc;
+  color: #00cfff;
   text-align: center;
 }
 
 .contact-form {
+  background: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -19,27 +30,57 @@
 
 .contact-form label {
   font-weight: 600;
-  color: #003d66;
+  color: #777cd5;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.6rem 0.8rem;
-  border: 1.8px solid #007acc;
+  border: 1.8px solid #00cfff;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
   outline-offset: 2px;
   transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1.8px solid #00cfff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* 👇 new styles */
+  background-color: rgba(255, 255, 255, 0.1); /* almost transparent */
+  color: #fff; /* white text for contrast */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #005fa3;
+  border-color: #777cd5;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #777cd5;
 }
 
 .contact-form button {
-  background-color: #007acc;
+  background-color: #00cfff;
   color: white;
   font-weight: 700;
   border: none;
@@ -61,35 +102,60 @@
   font-weight: 600;
 }
 
-/* Dark mode styles */
-.app.dark .contact-section h2 {
-  color: #66ccff;
+.alt-contact {
+  margin-top: 2rem;
+  text-align: center;
+  color: #777cd5;
 }
 
-.app.dark .contact-form label {
-  color: #a0d8ff;
+.alt-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-.app.dark .contact-form input,
-.app.dark .contact-form textarea {
-  background-color: #222;
-  color: #eee;
-  border-color: #66ccff;
+.alt-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.app.dark .contact-form input:focus,
-.app.dark .contact-form textarea:focus {
-  border-color: #3399ff;
+.alt-contact a:hover {
+  text-decoration: underline;
+  color: #00c;
 }
 
-.app.dark .contact-form button {
-  background-color: #3399ff;
+/* ✅ Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-section {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
 }
 
-.app.dark .contact-form button:hover {
-  background-color: #66ccff;
-}
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 0.5rem;
+  }
 
-.app.dark .thank-you-message {
-  color: #66ccff;
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .alt-contact h3 {
+    font-size: 1rem;
+  }
+
+  .alt-contact a {
+    font-size: 0.95rem;
+  }
 }
