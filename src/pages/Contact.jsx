@@ -4,7 +4,38 @@ import Footer from "../components/Footer";
 import "../styles/Contact.css";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      body: data,
+    })
+      .then(() => {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => alert(error));
+  };
 
   return (
     <div className="contact-page">
@@ -17,13 +48,13 @@ export default function Contact() {
           </p>
         ) : (
           <form
+            className="contact-form"
+            onSubmit={handleSubmit}
             name="contact"
             method="POST"
             data-netlify="true"
-            onSubmit={() => setSubmitted(true)}
-            className="contact-form"
           >
-            {/* Netlify hidden form name field */}
+            {/* Hidden form-name field */}
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">Name</label>
@@ -31,8 +62,9 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your full name"
-              required
             />
 
             <label htmlFor="email">Email</label>
@@ -40,8 +72,9 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="you@example.com"
-              required
             />
 
             <label htmlFor="message">Message</label>
@@ -49,8 +82,9 @@ export default function Contact() {
               id="message"
               name="message"
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Write your message here..."
-              required
             />
 
             <button type="submit">Send</button>
