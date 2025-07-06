@@ -8,19 +8,20 @@ function AboutHero() {
       <div className="text-section">
         <h2>Get to Know Me:</h2>
         <p>
-          I’m a passionate software developer based in South Africa, dedicated to building
-          clean, efficient, and user-friendly web applications. With a strong foundation in
-          front-end technologies and a growing expertise in full-stack development, I enjoy
-          solving complex problems and creating meaningful digital experiences.
+          I’m a passionate software developer based in South Africa, dedicated
+          to building clean, efficient, and user-friendly web applications. With
+          a strong foundation in front-end technologies and a growing expertise
+          in full-stack development, I enjoy solving complex problems and
+          creating meaningful digital experiences.
         </p>
 
         <div className="personal-info">
           <h3>Full Name: Farai Vambe</h3>
           <p>Age: 25 Years</p>
-          <p>Language: English, Shona</p>
+          <p>Language: English</p>
           <p>Phone No: +27 86737863</p>
           <p>Email: vambef7@gmail.com</p>
-          <p>Address: 60 Die Ou Pad Rd, Harveston AH, Roodepoort, 1724</p>
+          <p>Location: Johannesburg, 1724</p>
         </div>
       </div>
 

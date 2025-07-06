@@ -10,7 +10,9 @@ function Header() {
         <div className="header-title">
           <h1>Farai Vambe</h1>
           <p className="subtitle">Front-End Developer</p>
-          <p className="tagline">“Crafting modern web experiences with React”</p>
+          <p className="tagline">
+            “Crafting modern web experiences with React”
+          </p>
         </div>
       </div>
     </header>

@@ -42,6 +42,7 @@ export default function Contact() {
       <Navigator />
       <section className="contact-section">
         <h2>Contact Me</h2>
+
         {submitted ? (
           <p className="thank-you-message">
             Thanks for reaching out! I'll get back to you soon.
@@ -89,6 +90,26 @@ export default function Contact() {
             <button type="submit">Send</button>
           </form>
         )}
+
+        <div className="alt-contact">
+          <h3>Or reach me directly:</h3>
+          <p>
+            Email: <a href="mailto:vambef7@gmail.com">vambef7@gmail.com</a>
+          </p>
+          <p>
+            Phone: <a href="tel:+2786737863">+27 786 737 863</a>
+          </p>
+          <p>
+            WhatsApp:{" "}
+            <a
+              href="https://wa.me/27786737863"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chat on WhatsApp
+            </a>
+          </p>
+        </div>
       </section>
       <Footer />
     </div>

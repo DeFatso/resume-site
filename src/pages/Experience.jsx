@@ -1,6 +1,6 @@
 import React from "react";
 import Navigator from "../components/Navigator";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import "../styles/Experience.css";
 
 const jobs = [
@@ -28,6 +28,34 @@ const jobs = [
   },
 ];
 
+const projects = [
+  {
+    title: "Portfolio Website",
+    description: "This portfolio website built with React",
+    link: "https://github.com/DeFatso/resume-site",
+  },
+  {
+    title: "Printf",
+    description: "A simple printf implementation in C",
+    link: "https://github.com/DeFatso/alx-pritf_f",
+  },
+  {
+    title: "Simple Shell",
+    description: "A version of the Unix shell",
+    link: "https://github.com/DeFatso/simple-shell",
+  },
+  {
+    title: "AirBnB Clone",
+    description: "A clone of the AirBnB website",
+    link: "https://github.com/DeFatso/AirBnB_clone",
+  },
+  {
+    title: "Saeku Blockchain Services",
+    description: "A blockchain services provider",
+    link: "https://github.com/farscorp/saeku-web-frontend",
+  },
+];
+
 export default function Experience() {
   return (
     <section className="experience-section">
@@ -46,6 +74,28 @@ export default function Experience() {
                 <li key={idx}>{item}</li>
               ))}
             </ul>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="experience-title" style={{ marginTop: "3rem" }}>
+        Projects
+      </h2>
+      <div className="experience-timeline">
+        {projects.map((project, index) => (
+          <div key={index} className="experience-card fade-in">
+            <div className="experience-header">
+              <h3>{project.title}</h3>
+            </div>
+            <p className="description">{project.description}</p>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="company"
+            >
+              View on GitHub
+            </a>
           </div>
         ))}
       </div>

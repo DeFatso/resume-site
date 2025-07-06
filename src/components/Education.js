@@ -23,8 +23,12 @@ function Education() {
       {educationList.map((edu, index) => (
         <div key={index} className="education-item">
           <h3>{edu.degree}</h3>
-          <p><strong>{edu.school}</strong></p>
-          <p>{edu.year} — <em>{edu.status}</em></p>
+          <p>
+            <strong>{edu.school}</strong>
+          </p>
+          <p>
+            {edu.year} — <em>{edu.status}</em>
+          </p>
         </div>
       ))}
     </section>
