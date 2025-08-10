@@ -7,7 +7,7 @@ function Navigator() {
 
   return (
     <nav className="nav-bar">
-      <div className="nav-title">Resume</div>
+      <a href="/" className="nav-title">Resume</a>
 
       <div className={`nav-center ${menuActive ? "active" : ""}`}>
         <Link to="/" onClick={() => setMenuActive(false)}>

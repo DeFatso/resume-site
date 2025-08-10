@@ -20,6 +20,10 @@ body {
   background-color: transparent;
 }
 
+.nav-bar a {
+  text-decoration: none;
+}
+
 /* Site Title */
 .nav-title {
   font-family: 'Handlee', cursive;
