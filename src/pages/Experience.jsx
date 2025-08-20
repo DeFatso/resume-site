@@ -7,7 +7,7 @@ const jobs = [
   {
     role: "Junior Front-End Developer",
     company: "Intusol Tech",
-    period: "2024 – Present",
+    period: "March 2025 -",
     description: [
       "Developed responsive front-end interfaces using React and modern web technologies.",
       "Collaborated with design and backend teams to build smooth user experiences.",
@@ -17,7 +17,7 @@ const jobs = [
   {
     role: "Software Development Intern",
     company: "Farscope",
-    period: "2023 – 2024",
+    period: "July 2024 – December 2024",
     description: [
       "Led initial project setup, including GitHub repositories and version control workflow.",
       "Provided ongoing technical support for fellow interns (hardware & software setup).",
